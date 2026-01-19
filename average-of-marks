@@ -1,0 +1,16 @@
+// TO FIND AVERAGE MARKS OF THREE STUDENTS
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    float m1, m2, m3, avg = 0;
+
+    cout << "Enter marks1, 2, 3: ";
+    cin >> m1 >> m2 >> m3;
+
+    avg = (m1+m2+m3) / 3;
+    cout << "Average: " << avg << endl;
+
+    return 0;
+}
