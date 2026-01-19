@@ -1,0 +1,21 @@
+// APPLY 20% DISCOUNT
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int itemNo, qty;
+    float unitPrice = 0;
+
+    cout << "Enter Item Number: ";
+    cin >> itemNo;
+    cout << "Enter quantity: ";
+    cin >> qty;
+    cout << "Enter Unit Price: ";
+    cin >> unitPrice;   
+
+    float final = (float)((qty * unitPrice) * 0.20);
+    cout << "==== BILL ====\nItem No. : " << itemNo << "\nBefore 20% : " << (float)(qty * unitPrice) << "\nAfter 20% : " << final << endl;
+
+    return 0;
+}
