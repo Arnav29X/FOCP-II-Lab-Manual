@@ -1,16 +1,32 @@
-// CONVERSION OF FAHRENHEIT TO CELSIUS
+// CONVERSION OF FAHRENHEIT TO CELSIUS AND VICE VERSA
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    double fahrenheit;
+    double fahrenheit, celsius;
+    int choice;
+    cout << "==== MENU ====\n";
+    cout << "1 - F to C\n";
+    cout << "2 - C to F\n";
+    cout << "Your input: ";
+    cin >> choice;
 
-    cout << "Enter temperature in fahrenheit: ";
-    cin >> fahrenheit;
-
-    double celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
-    cout << "Fahrenheit to Celsius: " << celsius;
+    switch(choice){
+        case 1:   
+            cout << "Enter temperature in fahrenheit: ";
+            cin >> fahrenheit;
+            celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
+            cout << "Fahrenheit to Celsius: " << celsius;
+            break;
+        
+        case 2:
+            cout << "Enter temperature in celsius: ";
+            cin >> celsius;
+            fahrenheit = (celsius * 9 / 5) + 32;
+            cout << "Celsius to Fahrenheit: " << fahrenheit;
+            break;
+    }
 
     return 0;
 }
