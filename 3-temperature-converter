@@ -26,6 +26,10 @@ int main(){
             fahrenheit = (celsius * 9 / 5) + 32;
             cout << "Celsius to Fahrenheit: " << fahrenheit;
             break;
+
+        default:
+            cout << "INVALID INPUT, TRY AGAIN!\n";
+            break;
     }
 
     return 0;
