@@ -1,0 +1,79 @@
+// SWAPPING VARIABLES BY DIFFERENT METHODDS
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int choice;
+    int a, b;
+    int temp;
+
+    cout << "======= MENU ======\n";
+    cout << "1 - Temp variable method\n";
+    cout << "2 - Plus/Minus method\n";
+    cout << "3 - Multiply/Divide method\n";
+    cout << "4 - XOR method\n";
+    cout << "===================\n";
+    cout << "Your input: ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Enter a: ";
+            cin >> a;
+            cout << "Enter b: ";
+            cin >> b;
+            
+            temp = a;
+            a = b;
+            b = temp;
+
+            cout << "a: " << a << '\n' << "b: " << b << '\n';
+            break;
+        
+        case 2:
+            cout << "Enter a: ";
+            cin >> a;
+            cout << "Enter b: ";
+            cin >> b;
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            cout << "a: " << a << '\n' << "b: " << b << '\n';
+            break;
+
+        case 3:
+            cout << "Enter a: ";
+            cin >> a;
+            cout << "Enter b: ";
+            cin >> b;
+
+            a = a * b;
+            b = a / b;
+            a = a / b;
+
+            cout << "a: " << a << '\n' << "b: " << b << '\n';
+            break;
+
+        case 4:
+            cout << "Enter a: ";
+            cin >> a;
+            cout << "Enter b: ";
+            cin >> b;
+
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+
+            cout << "a: " << a << '\n' << "b: " << b << '\n';
+            break;
+
+        default:
+            cout << "INVALID INPUT!";
+            break;
+    }
+    
+    return 0;
+}
