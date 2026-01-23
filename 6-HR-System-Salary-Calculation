@@ -1,0 +1,26 @@
+// An HR system needs to calculate employees’ net salaries, including a fixed 12% bonus for each worker.
+// Implement a solution to accept the number of employees and their basic salary. Compute bonus, net salary, and
+// display results.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int emps;
+
+    cout << "How many employees are there? : ";
+    cin >> emps;
+    float salary[emps];
+
+    for (int i = 0; i < emps; i++) {
+        cout << "Enter salary for emp#" << i+1 << ": ";
+        cin >> salary[i];
+    }
+
+    cout << "===== DETAILS =====\n";
+    for (int i = 0; i < emps; i++) {
+        cout << i+1 << ") " << "Without increment: " << salary[i] << " || " << "With increment: " << salary[i] + (salary[i] * 0.12) << endl;
+    }
+
+    return 0;
+}
