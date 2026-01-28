@@ -1,0 +1,29 @@
+/*
+A text editor auto-detects whether an input letter is a vowel, a consonant or a number.
+Implement a solution to classify the symbol.
+*/
+
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main(){
+    char input;
+    cout << "Enter letter: ";
+    cin >> input;
+    if (tolower(input) == 'a' ||
+        tolower(input) == 'e' ||
+        tolower(input) == 'i' ||
+        tolower(input) == 'o' ||
+        tolower(input) == 'u') {
+            cout << "Input \"" << input << "\" is a vowel!";
+        }
+
+    else if (input >= 48 && input <= 57) {
+        cout << "Input \"" << input << "\" is a digit!";
+    }
+    
+    else {cout << "Input \"" << input << "\" is a consonant!";}
+
+    return 0;
+}
