@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int N;
+	string S;
+	cin >> N;
+	cin.ignore();
+	getline(cin, S);
+	cout << N*2 << endl;
+	cout << S << endl;
+}
