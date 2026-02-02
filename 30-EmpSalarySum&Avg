@@ -1,0 +1,28 @@
+/*
+A payroll system maintains employee salary records.
+Implement a solution to accept salary of 10 employees in an array,
+compute total salary and average salary, then display the result.
+*/
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    float salary[10];
+    float total = 0;
+    float avg = 0;
+
+    cout << "----- INPUT SALARIES -----\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "Enter salary " << i+1 << ": ";
+        cin >> salary[i];
+        total += salary[i];
+    } avg = total/10;
+
+    cout << "\n----     DETAILS     ----\n";
+    cout << "TOTAL: " << total << endl;
+    cout << "AVERAGE: " << avg << endl;
+    cout << "\n-------------------------\n";
+    
+    return 0;
+}
