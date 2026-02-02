@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	char ch[20];
+	cin >> ch;
+
+	int i=0, x=0, y=0;
+	while (ch[i] != '\0') {
+		if (ch[i] == 'z') x++;
+		else if (ch[i] == 'o') y++;
+		i++;
+	}
+
+	if (2*x == y) printf("Yes");
+	else printf("No");
+
+	return 0;
+}
