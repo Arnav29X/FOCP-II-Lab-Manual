@@ -1,0 +1,29 @@
+// PARTIALLY ACCEPTED
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int N, scode, max = 0;
+    int track[100] = {0};
+
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        cin >> scode;
+        track[scode]++;
+        if (max < track[scode]) {
+            max = track[scode];
+        }
+    }
+
+    int countMax = 0;
+    for (int i = 0; i < 100; i++) {
+        if (track[i] == max) {
+            countMax++;
+        }
+    }
+    cout << countMax;
+
+    return 0;
+}
