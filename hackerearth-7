@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string S;
+    getline(cin, S);
+
+    string Sreplica = S;
+    reverse(Sreplica.begin(), Sreplica.end());
+
+    if (S == Sreplica) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
+    return 0;
+}
